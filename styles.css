@@ -1,0 +1,54 @@
+* {
+  border: 1px solid pink;
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  font-family: 'Open Sans', Optima, sans-serif;
+}
+
+header {
+	background-color: #404041;
+	text-align: center;
+	color: #DD1972;
+	height: 20vh;
+}
+
+main {
+	display: flex;
+	height:80vh;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+
+div {
+	background-color: #ffffff;
+}
+
+.user-input {
+	background-color: #f7f7f7;
+	justify-content: space-between;
+}
+
+.history {
+	background-color: #d0d2d3;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.history div {
+	background-color: #ffffff;
+	color: #6e6e6e;
+	width: 90%;
+}
+
+.latest-score {
+	display: flex;
+	flex-direction: row;
+}
+
+
+
