@@ -9,8 +9,24 @@
 header {
 	background-color: #404041;
 	text-align: center;
-	color: #DD1972;
 	height: 20vh;
+}
+
+header h1 {
+	color: #DD1972;
+	font-family:'Open-Sans'
+	font-weight: 700;
+}
+
+header span {
+	font-family: 'Open-Sans' 
+	font-weight: 300;
+}
+
+header h2 {
+	color: #ffffff;
+	font-family: 'Open-Sans' 
+	font-weight: 300;
 }
 
 main {
@@ -30,10 +46,27 @@ div {
 
 .user-input {
 	background-color: #f7f7f7;
-	justify-content: space-between;
+	display: flex;
+	flex-direction: column;
+}
+
+.input-range {
+	height: 30%;
+}
+
+.input-challenger {
+	height:40% ;
+	display: flex;
+	flex-direction: column;
+}
+
+.latest-score {
+	height:30% ;
+	display: flex;
 }
 
 .history {
+	display: flex;
 	background-color: #d0d2d3;
 	justify-content: space-around;
 	align-items: center;
@@ -48,6 +81,14 @@ div {
 .latest-score {
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
+}
+
+.latest-score-guess-1, 
+.latest-score-guess-2 {
+	font-size: 100px;
+	color: #F74D9B;
+	font-weight: 700;
 }
 
 
