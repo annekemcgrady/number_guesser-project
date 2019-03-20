@@ -33,6 +33,11 @@ div {
 	justify-content: space-between;
 }
 
+.range-update {
+	background-color: #6E6E6E;
+	color: #ffffff;
+	
+}
 .history {
 	background-color: #d0d2d3;
 	justify-content: space-around;
