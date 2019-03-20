@@ -65,6 +65,11 @@ div {
 	display: flex;
 }
 
+.range-update {
+	background-color: #6E6E6E;
+	color: #ffffff;
+	
+}
 .history {
 	display: flex;
 	background-color: #d0d2d3;
