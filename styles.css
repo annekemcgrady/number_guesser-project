@@ -9,29 +9,29 @@
 header {
 	background-color: #404041;
 	text-align: center;
-	height: 20vh;
+	height: 15vh;
 }
 
 header h1 {
 	color: #DD1972;
-	font-family:'Open-Sans'
+	font-family:'Open-Sans', sans-serif;
 	font-weight: 700;
 }
 
 header span {
-	font-family: 'Open-Sans' 
+	font-family: 'Open-Sans', sans-serif;
 	font-weight: 300;
 }
 
 header h2 {
 	color: #ffffff;
-	font-family: 'Open-Sans' 
+	font-family: 'Open-Sans', sans-serif;
 	font-weight: 300;
 }
 
 main {
 	display: flex;
-	height:80vh;
+	height:85vh;
 }
 
 section {
@@ -48,28 +48,77 @@ div {
 	background-color: #f7f7f7;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-around;
 }
 
 .input-range {
-	height: 30%;
+	height: 15%;
+	/*display:flex;
+	flex-direction: column;*/
+}
+
+.input-range p {
+	font-weight: 700;
+	color:#6e6e6e;
+	padding-bottom: 15px;
+}
+
+.min-range,
+.max-range {
+	display:inline-block;
+	height: 30px;
+	width: 100px;
 }
 
 .input-challenger {
-	height:40% ;
 	display: flex;
 	flex-direction: column;
+	height:40% ;
 }
 
-.latest-score {
-	height:30% ;
-	display: flex;
+.input-challenger div p {
+	font-weight: 700;
+	font-size: 16px;
+	color: #6e6e6e;
+	padding-bottom: 10px;
+}
+
+.min-num
+.max-num {
+	font-style: underline;
+	min-width: 1em;
 }
 
 .range-update {
 	background-color: #6E6E6E;
-	color: #ffffff;
-	
+	color: #ffffff;	
+	width: 80px;
+	height: 20px;
+	border-radius: 40px;
 }
+
+.latest-score {
+	height:35% ;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.latest-score div {
+	height:80%;
+	display: flex;
+	flex-direction:column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.latest-score-guess-1, 
+.latest-score-guess-2 {
+	font-size: 60px;
+	color: #F74D9B;
+	font-weight: 700;
+}
+
 .history {
 	display: flex;
 	background-color: #d0d2d3;
@@ -82,19 +131,5 @@ div {
 	color: #6e6e6e;
 	width: 90%;
 }
-
-.latest-score {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-}
-
-.latest-score-guess-1, 
-.latest-score-guess-2 {
-	font-size: 100px;
-	color: #F74D9B;
-	font-weight: 700;
-}
-
 
 
