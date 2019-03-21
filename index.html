@@ -9,7 +9,7 @@
       <body>
         <header>
           <h1>Number<span>Guesser</span></h1>
-          <h2>-------Ultimate Challenge Edition-------</h2>
+          <h2><span class="header-line">LorumIpsum</span> Ultimate Challenger Edition <span class="header-line">LorumIpsum</span></h2>
         </header>
         <main>
           <section class="user-input">
@@ -25,50 +25,59 @@
             <p>The Current Range is <span class="min-num">1 </span> to <span class="max-num"> 100</span></p>
               <div>
                 <p>Challenger 1</p>
-                <label for="challenger-1">Name</label>
-                <input type="text" name="challenger-1" class="challenger-1" />
-                <label for="guess-1">Guess</label>
-                <input type="number" name="guess-1" class="guess-1" />
-                <br>
+                  <div class="challenger-1-container">
+                    <label for="challenger-1">Name</label>
+                    <br>
+                    <input type="text" name="challenger-1" class="challenger-1" />
+                    <label for="guess-1">Guess</label>
+                    <br>
+                    <input type="number" name="guess-1" class="guess-1" />
+                 </div>
                 <p>Challenger 2</p>
-                <label for="challenger-2">Name</label>
-                <input type="text" name="challenger-2" class="challenger-2" />
-                <label for="guess-2">Guess</label>
-                <input type="number" name="guess-2" class="guess-2" />
+                  <div class="challenger-2-container">
+                    <label for="challenger-2">Name</label>
+                    <br>
+                    <input type="text" name="challenger-2" class="challenger-2" />
+                    <label for="guess-2">Guess</label>
+                    <br>
+                    <input type="number" name="guess-2" class="guess-2" />
+                  </div>
               </div> 
               <div class="bottom-buttons">
                 <button class ="submit-guess">SUBMIT GUESS</button>
                 <button class="reset-game">RESET GAME</button>
-                <buttone class="clear-game">CLEAR GAME</button>
+                <button class="clear-game">CLEAR GAME</button>
               </div>
             </div>
-            <div class ="latest-score">
-              <p>Latest Score</p>
-              <br>
-                <div>
-                  <span class="latest-score-1">Challenger 1 Name</span>
-                  <p>current guess</p>
-                  <span class="latest-score-guess-1">97</span>
-                  <p class="message-1">that's too high</p>
-                </div>
-
-                <div>
-                  <span class="latest-score-2">Challenger 2 Name</span>
-                  <p>current guess</p>
-                  <span class="latest-score-guess-2">3</span>
-                  <p class="message-2">that's too high</p>
-                </div>
+            <div class="latest-score-container">
+             <p class="latest-score-title">Latest Score</p>
+              <div class ="latest-score">
+                <br>
+                  <div>
+                    <span class="latest-score-1">Challenger 1 Name</span>
+                    <p>current guess</p>
+                    <span class="latest-score-guess-1">97</span>
+                    <p class="message-1">that's too high</p>
+                  </div>
+                  <div>
+                    <span class="latest-score-2">Challenger 2 Name</span>
+                    <p>current guess</p>
+                    <span class="latest-score-guess-2">3</span>
+                    <p class="message-2">that's too high</p>
+                  </div>
             </div> 
+          </div>
           </section>
           <section class ="history">
-            <div>
-              <h1><span>Challenger 1 Name</span>vs<span>Challenger 2 Name</span></h1>
+            <div class="card-container card-1">
+              <h1 class="card-title"><span class="card-title-chal-1">Challenger 1 Name</span> vs <span class="card-title-chal-2">Challenger 2 Name</span></h1>
                 <p>Challenger 2 Name</p>
                 <div>
                   <p>WINNER</p>
-                  <p>GUESSES</p>
                 </div>
-                <div>
+                <div class="card-footer">
+                   <p>GUESSES</p>
+                   <p>MINUTES</p>
                   <button class="delete-card">Delete</button>
                 </div>
             </div>
