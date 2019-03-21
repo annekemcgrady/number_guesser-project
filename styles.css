@@ -1,5 +1,5 @@
 * {
-  /*border: 1px solid pink;*/
+/*  border: 1px solid pink;*/
   box-sizing: border-box;
   font-family: 'Open Sans', Optima, sans-serif;
   margin:0;
@@ -27,6 +27,11 @@ header h2 {
 	color: #ffffff;
 	font-family: 'Open-Sans', sans-serif;
 	font-weight: 300;
+}
+
+.header-line {
+	text-decoration: line-through solid #f7f7f7;
+	color: #404041;
 }
 
 main {
@@ -84,7 +89,7 @@ div {
 .input-challenger {
 	display: flex;
 	flex-direction: column;
-	height:40%;
+	height:42%;
 	width: 95%;
 }
 
@@ -92,7 +97,7 @@ div {
 	font-weight: 700;
 	font-size: 16px;
 	color: #6e6e6e;
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 }
 
 .challenger-1-container,
@@ -198,7 +203,6 @@ div {
 	font-weight: 700;
 }
 
-
 .card-container {
 	background-color: #ffffff;
 	color: #6e6e6e;
@@ -208,6 +212,10 @@ div {
 	justify-content: space-between;
 	width: 95%;
 	height: 30%;
+}
+
+.card-1 {
+	/*visibility: hidden;*/
 }
 
 .card-footer {
