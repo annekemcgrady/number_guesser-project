@@ -10,6 +10,8 @@ var inputChallengerTwo = document.querySelector('.challenger-2');
 var inputGuessOne = document.querySelector('.guess-1');
 var inputGuessTwo = document.querySelector('.guess-2');
 
+var randomNum = Math.floor((Math.random() * 100) + 1);
+
 
 rangeUpdateButton.addEventListener('mouseover', function () {
   var backgroundColor = rangeUpdateButton.style.background-color;
@@ -29,6 +31,8 @@ rangeUpdateButton.addEventListener('click', function () {
   minNumber.textContent = minimumValue;
   maxNumber.innerHTML = maximumValue;
   
+  var rndNum = getRandomIntInclusive(minimumValue, maximumValue);
+  console.log('Random number is : ', rndNum);
 });
 
 submitGuessButton.addEventListener('click', function() {
@@ -48,4 +52,19 @@ submitGuessButton.addEventListener('click', function() {
   var displayGuessTwo = document.querySelector('.latest-score-guess-2');
   displayGuessOne.textContent = numGuessOne;
   displayGuessTwo.textContent = numGuessTwo;
+
+  /* JMO testing random number generator */
+  for (i = 0; i <100; i++) {
+  console.log('Random number is: ', randomNum, '\n'); 
+  randomNum = Math.floor((Math.random() * 100) + 1);
+  }
 })
+
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
+}
+
+
+
