@@ -53,7 +53,7 @@ submitGuessButton.addEventListener('click', function() {
   displayGuessOne.textContent = numGuessOne;
   displayGuessTwo.textContent = numGuessTwo;
 
-  // var randomArray[];
+  /* JMO testing random number generator */
   for (i = 0; i <100; i++) {
   console.log('Random number is: ', randomNum, '\n'); 
   randomNum = Math.floor((Math.random() * 100) + 1);
