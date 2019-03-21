@@ -37,7 +37,7 @@ submitGuessButton.addEventListener('click', function() {
   var numGuessOne = parseInt(inputGuessOne.value);
   var numGuessTwo = parseInt(inputGuessTwo.value);
   console.log(numGuessOne, numGuessTwo);
-  // var displayGuessOne = document.querySelector('.latest-score-guess-1');
+  var displayGuessOne = document.querySelector('.latest-score-guess-1');
   console.log(displayGuessOne.textContent);
   var displayScoreOne = document.querySelector('.latest-score-1');
   var displayScoreTwo = document.querySelector('.latest-score-2');
