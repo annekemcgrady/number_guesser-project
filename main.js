@@ -66,5 +66,20 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
 }
 
+// Update Player One Message
+function updateMessageOne(inputChallengerOne){
+var challengerOneMsg;
+if (inputChallengerOne ==rndNum){
+  challengerOneMsg = "BOOM!";
+} else if (inputChallengerOne<rndNum){
+  challengerOneMsg = "That's too low";
+} else (inputChallengerOne>rndNum)
+  challengerOneMsg = "That's too high";
+}
+// var messageOne = document.querySelector('.message-1');
+// messageOne.texContent=challengerOneMsg;
+console.log(updateMessageOne);
+
+
 
 
