@@ -67,18 +67,22 @@ function getRandomIntInclusive(min, max) {
 }
 
 // Update Player One Message
-function updateMessageOne(inputChallengerOne){
-var challengerOneMsg;
-if (inputChallengerOne ==rndNum){
-  challengerOneMsg = "BOOM!";
-} else if (inputChallengerOne<rndNum){
-  challengerOneMsg = "That's too low";
-} else (inputChallengerOne>rndNum)
-  challengerOneMsg = "That's too high";
-}
+// function updateMessageOne(inputChallengerOne){
+// var challengerOneMsg;
+// if (inputChallengerOne ==rndNum){
+//   challengerOneMsg = "BOOM!";
+//   // function to update card
+// } else if (inputChallengerOne<rndNum){
+//   challengerOneMsg = "That's too low";
+// } else if (inputChallengerOne>rndNum) {
+//   challengerOneMsg = "That's too high";
+//   else 
+//     return ('error');
+// }
+// }
 // var messageOne = document.querySelector('.message-1');
 // messageOne.texContent=challengerOneMsg;
-console.log(updateMessageOne);
+// console.log(updateMessageOne);
 
 
 

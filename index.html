@@ -2,7 +2,7 @@
   <html>
     <head>
       <title>Anneke and Jon Number Guesser</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0">
       <link href="styles.css" rel="stylesheet" /> 
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
     </head>
@@ -14,44 +14,51 @@
         <main>
           <section class="user-input">
             <div class ="input-range">
-               <p>Set Range</p>
-               <br>
-               <div class="min-range-container">
-              <label for="min-range">Min Range</label>
-              <br>
-              <input type="number" id="input-min-range" class ="min-range" name="min-range" /></div>
-              <div class="max-range-container">
-              <label for="max-range">Max Range</label>
-              <br>
-              <input type="number" class="max-range" name="max-range" />
-            </div>
-              <button class="range-update">Update</button>
-            </div>
-            <div class="input-challenger">
-              <div class="challenger-names">
-            <p>The Current Range is <span class="min-num">1 </span> to <span class="max-num"> 100</span></p>
-                     <p class="challenger-header">Challenger 1</p>
-                    <label for="challenger-1">Name</label>
-                    <input type="text" name="challenger-1" class="challenger-1" />
-                    <p class="challenger-header">Challenger 2</p>
-                    <label for="challenger-2">Name</label>
-                    <input type="text" name="challenger-2" class="challenger-2" />
-                 </div>
-                  <div class="challenger-guess">
-                    <br>
-                    <br>
-                    <label for="guess-1">Guess</label>
-                    <input type="number" name="guess-1" class="guess-1" />
-                    <br>
-                    <label for="guess-2">Guess</label>
-                    <input type="number" name="guess-2" class="guess-2" />
-                 </div> 
-               </div>
-              <div class="bottom-buttons">
-                <button class ="submit-guess">SUBMIT GUESS</button>
-                <button class="reset-game">RESET GAME</button>
-                <button class="clear-game">CLEAR GAME</button>
+               <p id="set-range-header">Set Range</p>
+               <div class="min-max-range-container">
+                 <div class="min-range-container">
+                 <label for="min-range">Min Range</label>
+                 <input type="number" id="input-min-range" class ="min-range" name="min-range" />
               </div>
+                 <div class="max-range-container">
+                 <label for="max-range">Max Range</label>
+                 <input type="number" class="max-range" name="max-range" />
+                </div>
+                <button class="range-update pink">Update</button>
+              </div>
+            </div>
+          <div class="input-challenger">       
+            <div class="current-range"> <p>The Current Range is <span class="min-num">1 </span> to <span class="max-num"> 100</span></p>
+            </div>
+            <div class="challenger-header"><p>Challenger 1</p>
+            </div>
+            <section class="challenger-one">
+               <section class="chal-name-input-field">
+                <label for="challenger-1">Name</label>
+                <input type="text" name="challenger-1" class="challenger-1" />
+              </section>
+              <section clas="chal-guess-input-field">
+                <label for="guess-1">Guess</label>
+                <input type="number" name="guess-1" class="guess-1" />
+              </section>
+            </section>
+               <div class="challenger-header"><p>Challenger 2</p></div>
+                <section class="challenger-two">
+                  <section class="chal-name-input-field">
+                  <label for="challenger-2">Name</label>
+                  <input type="text" name="challenger-2" class="challenger-2" />
+                  </section>
+              <section class="chal-guess-input-field">
+                <label for="guess-2">Guess</label>
+                <input type="number" name="guess-2" class="guess-2" />
+              </section>
+            </section> 
+              <section class="bottom-buttons">
+                <button class ="submit-guess pink">SUBMIT GUESS</button>
+                <button class="reset-game pink">RESET GAME</button>
+                <button class="clear-game pink">CLEAR GAME</button>
+              </section>
+            </div>
             <div class="latest-score-container">
              <p class="latest-score-title">Latest Score</p>
               <div class ="latest-score">
@@ -59,13 +66,13 @@
                   <div id="challenger-1-line">
                     <span class="latest-score-1">Challenger 1 Name</span>
                     <p>current guess</p>
-                    <span class="latest-score-guess-1">97</span>
+                    <span class="latest-score-guess-1"> ? </span>
                     <p><span class="message-1">that's too high</span></p>
                   </div>
                   <div>
                     <span class="latest-score-2">Challenger 2 Name</span>
                     <p>current guess</p>
-                    <span class="latest-score-guess-2">3</span>
+                    <span class="latest-score-guess-2"> ? </span>
                     <p> <span class="message-2">that's too high</span></p>
                   </div>
             </div> 
@@ -89,10 +96,7 @@
             <div>CARD 2</div>
             <div>CARD 3</div>
           </section>
-
-       
         </main>
-
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="anneke-js.js"></script>
     </body>   
  </html>
