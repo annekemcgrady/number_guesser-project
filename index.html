@@ -26,6 +26,8 @@
                 </div>
                 <button class="range-update pink">Update</button>
               </div>
+              <div><span class="min-max-error"> </span>
+              </div>
             </div>
           <div class="input-challenger">       
             <div class="current-range"> <p>The Current Range is <span class="min-num">1 </span> to <span class="max-num"> 100</span></p>
@@ -37,7 +39,7 @@
                 <label for="challenger-1">Name</label>
                 <input type="text" name="challenger-1" class="challenger-1" />
               </section>
-              <section clas="chal-guess-input-field">
+              <section class="chal-guess-input-field">
                 <label for="guess-1">Guess</label>
                 <input type="number" name="guess-1" class="guess-1" />
               </section>
@@ -55,8 +57,8 @@
             </section> 
               <section class="bottom-buttons">
                 <button class ="submit-guess pink">SUBMIT GUESS</button>
-                <button class="reset-game pink">RESET GAME</button>
-                <button class="clear-game pink">CLEAR GAME</button>
+                <button class="reset-game pink" disabled>RESET GAME</button>
+                <button class="clear-game pink" disabled>CLEAR GAME</button>
               </section>
             </div>
             <div class="latest-score-container">
@@ -69,7 +71,7 @@
                     <span class="latest-score-guess-1"> ? </span>
                     <p><span class="message-1">that's too high</span></p>
                   </div>
-                  <div>
+                  <div class= "challenger-2-line">
                     <span class="latest-score-2">Challenger 2 Name</span>
                     <p>current guess</p>
                     <span class="latest-score-guess-2"> ? </span>
@@ -80,13 +82,15 @@
           </section>
           <section class ="history">
             <div class="card-container card-1">
+              <div class =card-title-container>
               <h1 class="card-title"><span class="card-title-chal-1">Challenger 1 Name</span> vs <span class="card-title-chal-2">Challenger 2 Name</span></h1>
-              <p class="horizontal-rule">LorumIpsumLorumIpsumLorumIpsumLoreumIpsumLorumIpsum</p>
+            </div>
+              <p class="horizontal-rule">LorumIpsumLorumIpsumLorum</p>
                 <p><span class="card-winner-name">Challenger 2 Name</span></p>
                 <div>
                   <p class="card-winner">WINNER</p>
                 </div>
-                <p class="horizontal-rule">LorumIpsumLorumIpsumLorumIpsumLoreumIpsumLorumIpsum</p>
+                <p class="horizontal-rule">LorumIpsumLorumIpsumLorumIpsum</p>
                 <div class="card-footer">
                    <p><span> ___ </span>GUESSES</p>
                    <p><span> ___ </span>MINUTES</p>

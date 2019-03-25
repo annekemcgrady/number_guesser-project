@@ -63,9 +63,7 @@ submitGuessButton.addEventListener('click', function() {
   var nameChallengerTwo = inputChallengerTwo.value;
   var numGuessOne = parseInt(inputGuessOne.value);
   var numGuessTwo = parseInt(inputGuessTwo.value);
-  // console.log(numGuessOne, numGuessTwo);
   var displayGuessOne = document.querySelector('.latest-score-guess-1');
-  // console.log(displayGuessOne.textContent);
   var displayScoreOne = document.querySelector('.latest-score-1'); 
   var displayScoreTwo = document.querySelector('.latest-score-2');
   
@@ -111,8 +109,9 @@ submitGuessButton.addEventListener('click', function() {
   console.log(numGuessTwo);
   console.log(messageTwo);
 
-  if (numGuessTwo === randomNum) {
+    if (numGuessTwo === randomNum) {
   	messageTwo.innerText = "BOOM!";
+  	boomTwo();
   	
    } else if (numGuessTwo < randomNum){
    	messageTwo.innerText = "that's too low";
@@ -159,24 +158,103 @@ resetButton.addEventListener('click', function() {
 });
 
 function boomOne() {
+	// query challenger name latest score inputs
+	var inputChallengerOne = document.querySelector('.challenger-1');
+	var inputChallengerTwo = document.querySelector('.challenger-2');
+	var cardOneWinnerInput = document.querySelector('.latest-score-1');
+	// query card outputs
+	var cardOnePlayOne = document.querySelector('.card-title-chal-1');	
+	var cardOnePlayTwo = document.querySelector('.card-title-chal-2');
+	var cardOneWinner = document.querySelector('.card-winner-name');
+	// gets values from latest score name inputs
+	var NameChalOne = inputChallengerOne.value;
+	var NameChalTwo = inputChallengerTwo.value;
+	var cardOneWinnerOutput = cardOneWinnerInput.value;	
+
+	cardOnePlayOne.innerText = NameChalOne;
+	cardOnePlayTwo.innerText = NameChalTwo;
+	cardOneWinner.innerText = NameChalOne;
+
+};
+
+function boomTwo() {
 // query challenger name latest score inputs
-var nameOneInput = document.querySelector('.latest-score-1');
-var nameTwoInput = document.querySelector('.latest-score-2');
-console.log(nameOneInput);
-console.log(nameTwoInput);
+var inputChallengerOne = document.querySelector('.challenger-1');
+var inputChallengerTwo = document.querySelector('.challenger-2');
 // query card outputs
 var cardOnePlayOne = document.querySelector('.card-title-chal-1');	
 var cardOnePlayTwo = document.querySelector('.card-title-chal-2');
 var cardOneWinner = document.querySelector('.card-winner-name');
 // gets values from latest score name inputs
-var NameChalOne = nameOneInput.value;
-var NameChalTwo = nameTwoInput.value;	
-
-cardOnePlayTwo.innerText = NameChalOne;
+var NameChalOne = inputChallengerOne.value;
+var NameChalTwo = inputChallengerTwo.value;
+	
+cardOnePlayOne.innerText = NameChalOne;
 cardOnePlayTwo.innerText = NameChalTwo;
-cardOneWinner.innerText = NameChalOne;
+cardOneWinner.innerText = NameChalTwo;
 
 };
+
+// disable update button and create error if max is less than min
+
+maxValue.addEventListener('keyup', function(e){
+
+	var minValue = document.querySelector('.min-range');
+    var maxValue = document.querySelector('.max-range');
+    var minimumValue = parseInt(minValue.value);
+    var maximumValue = parseInt(maxValue.value);
+    var minMaxError = document.querySelector('.min-max-error');
+    e.preventDefault();
+
+  if (maximumValue < minimumValue) {
+
+  	console.log(maximumValue);
+	  rangeUpdateButton.disabled = true;
+	  rangeUpdateButton.classList.add("disabled");
+	  minMaxError.innerText = "Max can't be less than min!";
+
+ } else {
+   rangeUpdateButton.disabled = false;
+   rangeUpdateButton.classList.remove("disabled");
+   minMaxError.innerText = "";
+}
+ });
+
+function checkInputs() {
+
+	var resetNameOne = document.querySelector('.challenger-1');
+	var resetNameTwo = document.querySelector('.challenger-2');
+	var resetGuessOne = document.querySelector('.guess-1');
+	var resetGuessTwo = document.querySelector('.guess-2');
+	// var noNameOne = resetNameOne.value;
+	// var noNameTwo = resetNameTwo.value;
+	// var noGuessOne = resetGuessOne.value;
+	// var noGuessTwo = resetGuessTwo.value;
+
+	if (resetNameOne.value ==""|| resetNameTwo.value ==""|| resetGuessOne ==""||resetGuessTwo =="") {
+
+		clearButton.disabled = true;
+		clearButton.classList.add("disabled");
+		clearButton.classList.remove("pink");
+		resetButton.disabled = true;
+		resetButton.classList.remove("pink");
+		resetButton.classList.add("disabled");
+
+} else {
+	console.log("this is working");
+		clearButton.disabled = false;
+		clearButton.classList.remove("disabled");
+		resetButton.disabled = false;
+		resetButton.classList.remove("disabled");
+	}
+};
+
+checkInputs();
+
+
+// .addEventListener('keyup', function(e){
+
+	
 
 // TO-DOs
 
