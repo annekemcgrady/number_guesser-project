@@ -12,7 +12,6 @@ var inputGuessTwo = document.querySelector('.guess-2');
 
 var randomNum = Math.floor((Math.random() * 100) + 1);
 
-
 rangeUpdateButton.addEventListener('mouseover', function () {
   var backgroundColor = rangeUpdateButton.style.background-color;
   var textColor = rangeUpdateButton.style.color;
@@ -23,11 +22,6 @@ rangeUpdateButton.addEventListener('mouseover', function () {
 rangeUpdateButton.addEventListener('click', function () {
   var minimumValue = parseInt(minValue.value);
   var maximumValue = parseInt(maxValue.value);
-  console.log(minimumValue, maximumValue);
-  if (minimumValue === 333)
-  	console.log('minimumValue is a number!')
-   if (maximumValue===999)
-   	console.log('maximumValue is a number!!')
   minNumber.textContent = minimumValue;
   maxNumber.innerHTML = maximumValue;
   
@@ -66,5 +60,9 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
 }
 
+function setup() {
+	
+}
 
+window.addEventListener('load', setup, false);
 
