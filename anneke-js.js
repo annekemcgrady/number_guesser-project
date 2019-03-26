@@ -144,8 +144,8 @@ resetButton.addEventListener('click', function() {
 	clearPlayerInputs();
 	
 	var minValue = document.querySelector('.min-range');
-    var maxValue = document.querySelector('.max-range');
-    var minNumber = document.querySelector('.min-num');
+  var maxValue = document.querySelector('.max-range');
+  var minNumber = document.querySelector('.min-num');
 	var maxNumber = document.querySelector('.max-num');
 	minValue.value = "";
 	maxValue.value = "";
@@ -178,26 +178,26 @@ function boomOne() {
 };
 
 function boomTwo() {
-// query challenger name latest score inputs
-var inputChallengerOne = document.querySelector('.challenger-1');
-var inputChallengerTwo = document.querySelector('.challenger-2');
-// query card outputs
-var cardOnePlayOne = document.querySelector('.card-title-chal-1');	
-var cardOnePlayTwo = document.querySelector('.card-title-chal-2');
-var cardOneWinner = document.querySelector('.card-winner-name');
-// gets values from latest score name inputs
-var NameChalOne = inputChallengerOne.value;
-var NameChalTwo = inputChallengerTwo.value;
+  // query challenger name latest score inputs
+  var inputChallengerOne = document.querySelector('.challenger-1');
+  var inputChallengerTwo = document.querySelector('.challenger-2');
+  // query card outputs
+  var cardOnePlayOne = document.querySelector('.card-title-chal-1');	
+  var cardOnePlayTwo = document.querySelector('.card-title-chal-2');
+  var cardOneWinner = document.querySelector('.card-winner-name');
+  // gets values from latest score name inputs
+  var NameChalOne = inputChallengerOne.value;
+  var NameChalTwo = inputChallengerTwo.value;
 	
-cardOnePlayOne.innerText = NameChalOne;
-cardOnePlayTwo.innerText = NameChalTwo;
-cardOneWinner.innerText = NameChalTwo;
+  cardOnePlayOne.innerText = NameChalOne;
+  cardOnePlayTwo.innerText = NameChalTwo;
+  cardOneWinner.innerText = NameChalTwo;
 
 };
 
-// disable update button and create error if max is less than min
-
+// create error if max is less than min
 maxValue.addEventListener('keyup', function(e){
+  e.preventDefault();
 
 	var minValue = document.querySelector('.min-range');
     var maxValue = document.querySelector('.max-range');
@@ -210,56 +210,38 @@ maxValue.addEventListener('keyup', function(e){
 
   	console.log(maximumValue);
 	  rangeUpdateButton.disabled = true;
-	  rangeUpdateButton.classList.add("disabled");
+	  // rangeUpdateButton.classList.add("disabled");
 	  minMaxError.innerText = "Max can't be less than min!";
 
  } else {
    rangeUpdateButton.disabled = false;
-   rangeUpdateButton.classList.remove("disabled");
+   // rangeUpdateButton.classList.remove("disabled");
    minMaxError.innerText = "";
 }
  });
 
 function checkInputs() {
-
-	var resetNameOne = document.querySelector('.challenger-1');
-	var resetNameTwo = document.querySelector('.challenger-2');
-	var resetGuessOne = document.querySelector('.guess-1');
-	var resetGuessTwo = document.querySelector('.guess-2');
-	// var noNameOne = resetNameOne.value;
-	// var noNameTwo = resetNameTwo.value;
-	// var noGuessOne = resetGuessOne.value;
-	// var noGuessTwo = resetGuessTwo.value;
-
-	if (resetNameOne.value ==""|| resetNameTwo.value ==""|| resetGuessOne ==""||resetGuessTwo =="") {
-
+	
+	if (resetNameOne.value =="" || resetNameTwo.value =="" || resetGuessOne =="" || resetGuessTwo =="") {
+    console.log("if is working")
 		clearButton.disabled = true;
-		clearButton.classList.add("disabled");
-		clearButton.classList.remove("pink");
 		resetButton.disabled = true;
-		resetButton.classList.remove("pink");
-		resetButton.classList.add("disabled");
 
 } else {
-	console.log("this is working");
+
+		console.log("else is working");
 		clearButton.disabled = false;
-		clearButton.classList.remove("disabled");
-		resetButton.disabled = false;
-		resetButton.classList.remove("disabled");
-	}
-};
+    resetButton.disabled = false;
+  }
+}
 
-checkInputs();
+resetNameOne.addEventListener('keyup', checkInputs());
+console.log("I'm checking the inputs")
+resetNameTwo.addEventListener('keyup', checkInputs());
+resetGuessOne.addEventListener('keyup', checkInputs());
+resetGuessTwo.addEventListener('keyup', checkInputs());
 
 
-// .addEventListener('keyup', function(e){
-
-	
-
-// TO-DOs
-
-// make clear and reset buttons disabled when no input
-// document.getElementById("myBtn").disabled = true;
 
 
 
