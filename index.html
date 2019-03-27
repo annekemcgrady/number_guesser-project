@@ -8,8 +8,8 @@
     </head>
       <body>
         <header>
-          <h1>Number<span>Guesser</span></h1>
-          <h2><span class="header-line">LorumIpsum</span> Ultimate Challenger Edition <span class="header-line">LorumIpsum</span></h2>
+          <h1>NUMBER<span>GUESSER</span></h1>
+          <h2><span class="header-line">LorumIpsum</span> ULTIMATE CHALLENGER EDITION <span class="header-line">LorumIpsum</span></h2>
         </header>
         <main>
           <section class="user-input">
@@ -24,9 +24,9 @@
                  <label for="max-range">Max Range</label>
                  <input type="number" class="max-range" name="max-range" />
                 </div>
-                <button class="range-update">Update</button>
+                <button class="range-update">UPDATE</button>
               </div>
-              <div><span class="min-max-error"> </span>
+              <div class="min-max-error hidden" height="15"><img src=images/error-icon.svg alt = "error" height ="15"><span> max can't be less than min! </span>
               </div>
             </div>
           <div class="input-challenger">       
@@ -42,6 +42,8 @@
               <section class="chal-guess-input-field">
                 <label for="guess-1">Guess</label>
                 <input type="number" name="guess-1" class="guess-1" />
+                <div class="guess-1-error-msg hidden" height="15"> <img src="images/error-icon.svg" height="15" /><span> must be a number!</span></div>
+                <div class="guess-1-range-error-msg hidden" height="15"> <img src="images/error-icon.svg" height="15" /><span> guess must be in range!</span></div>
               </section>
             </section>
                <div class="challenger-header"><p>Challenger 2</p></div>
@@ -53,6 +55,9 @@
               <section class="chal-guess-input-field">
                 <label for="guess-2">Guess</label>
                 <input type="number" name="guess-2" class="guess-2" />
+                <div class ="guess-2-error-msg hidden" height = "15"> <img src="images/error-icon.svg" height="15" /> <span> must be a number!</span> 
+                </div>
+                <div class="guess-2-range-error-msg hidden" height="15"> <img src="images/error-icon.svg" height="15" /><span> guess must be in range!</span></div>
               </section>
             </section> 
               <section class="bottom-buttons">
@@ -69,19 +74,19 @@
                     <span class="latest-score-1">Challenger 1 Name</span>
                     <p>current guess</p>
                     <span class="latest-score-guess-1"> ? </span>
-                    <p><span class="message-1">that's too high</span></p>
+                    <p><span class="message-1">waiting for guess...</span></p>
                   </div>
                   <div class= "challenger-2-line">
                     <span class="latest-score-2">Challenger 2 Name</span>
                     <p>current guess</p>
                     <span class="latest-score-guess-2"> ? </span>
-                    <p> <span class="message-2">that's too high</span></p>
+                    <p> <span class="message-2">waiting for guess...</span></p>
                   </div>
             </div> 
           </div>
           </section>
           <section class ="history">
-            <div class="card-container card-1">
+            <div class="hidden card-container card-1">
               <div class =card-title-container>
               <h1 class="card-title"><span class="card-title-chal-1">Challenger 1 Name</span> vs <span class="card-title-chal-2">Challenger 2 Name</span></h1>
             </div>
@@ -92,13 +97,13 @@
                 </div>
                 <p class="horizontal-rule">LorumIpsumLorumIpsumLorumIpsum</p>
                 <div class="card-footer">
-                   <p><span> ___ </span>GUESSES</p>
-                   <p><span> ___ </span>MINUTES</p>
+                   <p><span class="card-guess"> ___ </span>GUESSES</p>
+                   <p><span class ="cardMinutes"> ___ </span>MINUTES</p>
                   <button class="delete-card">Delete</button>
                 </div>
             </div>
-            <div>CARD 2</div>
-            <div>CARD 3</div>
+            <div class="card-2 hidden">CARD 2</div>
+            <div class="card-3 hidden">CARD 3</div>
           </section>
         </main>
     <script type="text/javascript" src="anneke-js.js"></script>
